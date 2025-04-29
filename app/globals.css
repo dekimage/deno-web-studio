@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #3b82f6;
+  --dark-gray: #1f2937;
+  --lime-green: #84cc16;
+  --light-gray: #f3f4f6;
+}
+
+@layer base {
+  body {
+    @apply text-dark-gray bg-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-oswald font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-20;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-primary-blue rounded-md shadow-sm hover:bg-primary-blue/90 focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-200 border border-dark-gray bg-white text-dark-gray rounded-md shadow-sm hover:bg-light-gray focus:outline-none focus:ring-2 focus:ring-dark-gray focus:ring-offset-2;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-dark-gray sm:text-4xl md:text-5xl font-oswald;
+  }
+
+  .section-subtitle {
+    @apply mt-4 max-w-3xl text-xl text-dark-gray/80;
+  }
+
+  .feature-card {
+    @apply p-6 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-lg border border-light-gray hover:border-lime-green;
+  }
+}

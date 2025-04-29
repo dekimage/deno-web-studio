@@ -1,0 +1,292 @@
+"use client";
+
+import type React from "react";
+import { useState, useRef } from "react";
+import { Phone, Mail } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const formatDate = (date: Date): string => {
+  const day = date.getDate();
+  const month = date.toLocaleDateString("en-US", { month: "long" });
+  const year = date.getFullYear();
+
+  let suffix = "th";
+  if (day === 1 || day === 21 || day === 31) suffix = "st";
+  else if (day === 2 || day === 22) suffix = "nd";
+  else if (day === 3 || day === 23) suffix = "rd";
+
+  return `${month} ${day}${suffix}, ${year}`;
+};
+
+export default function ContactForm() {
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!recaptchaToken) {
+      alert("Please complete the reCAPTCHA verification.");
+      return;
+    }
+
+    console.log("Form submitted:", formData);
+    console.log("reCAPTCHA Token:", recaptchaToken);
+    alert(
+      "Thanks for your message! This is a demo form. reCAPTCHA token captured, but backend verification is not implemented."
+    );
+    recaptchaRef.current?.reset();
+    setRecaptchaToken(null);
+  };
+
+  const today = new Date();
+  const targetDate = new Date();
+  targetDate.setDate(today.getDate() + 14);
+
+  const phoneNumber = "+15551234567";
+  const cleanPhoneNumber = phoneNumber.replace(/\\D/g, "");
+  const emailAddress = "contact@dejanwebstudio.com";
+
+  return (
+    <section className="py-16 bg-white" id="contact">
+      <div className="container">
+        <div className="text-center">
+          <h2 className="section-title">LET&apos;S WORK TOGETHER</h2>
+          <p className="section-subtitle mx-auto">
+            Ready to get started? Reach out and let&apos;s discuss your project.
+          </p>
+        </div>
+
+        <div className="mt-12 mb-12 p-6 bg-light-gray rounded-lg shadow-sm">
+          <h3 className="text-2xl font-semibold text-center text-dark-gray font-oswald mb-6">
+            How It Works - Get Your Website Live in 14 Days!
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center p-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-3 font-bold text-white rounded-full bg-primary-blue text-xl">
+                1
+              </div>
+              <h4 className="mb-2 text-lg font-semibold text-dark-gray font-oswald">
+                Contact Us
+              </h4>
+              <p className="text-sm text-dark-gray/80">
+                Send us a message using the form below or{" "}
+                <a
+                  href={`mailto:${emailAddress}`}
+                  className="text-primary-blue hover:underline"
+                >
+                  email us
+                </a>{" "}
+                directly. Briefly describe your project (e.g., "I need a website
+                for my pizza business").
+              </p>
+            </div>
+            <div className="flex flex-col items-center p-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-3 font-bold text-white rounded-full bg-primary-blue text-xl">
+                2
+              </div>
+              <h4 className="mb-2 text-lg font-semibold text-dark-gray font-oswald">
+                Discovery Call
+              </h4>
+              <p className="text-sm text-dark-gray/80">
+                We&apos;ll contact you within 24 hours to schedule a quick call.
+                We&apos;ll discuss your needs in detail and answer all your
+                questions.
+              </p>
+            </div>
+            <div className="flex flex-col items-center p-4">
+              <div className="flex items-center justify-center w-12 h-12 mb-3 font-bold text-white rounded-full bg-primary-blue text-xl">
+                3
+              </div>
+              <h4 className="mb-2 text-lg font-semibold text-dark-gray font-oswald">
+                Launch!
+              </h4>
+              <p className="text-sm text-dark-gray/80">
+                After our call, we begin development. You can expect your brand
+                new website to be live and running by{" "}
+                <span className="font-semibold text-primary-blue">
+                  {formatDate(targetDate)}
+                </span>
+                !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-12 mt-12 lg:grid-cols-5">
+          <div className="lg:col-span-2">
+            <div className="space-y-6">
+              <h3 className="text-3xl font-semibold text-dark-gray font-oswald">
+                CONTACT INFORMATION
+              </h3>
+              <p className="text-dark-gray/80">
+                Have questions or ready to start your project? Reach out through
+                any of these channels:
+              </p>
+
+              <a
+                href={`https://wa.me/${cleanPhoneNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-4 transition duration-300 ease-in-out bg-white border border-light-gray rounded-lg shadow-sm hover:shadow-md hover:border-primary-blue/50"
+              >
+                <div className="flex items-center">
+                  <Phone className="flex-shrink-0 w-6 h-6 text-primary-blue" />
+                  <div className="ml-4">
+                    <p className="text-base font-medium text-dark-gray font-oswald">
+                      Phone (WhatsApp 24/7)
+                    </p>
+                    <p className="mt-1 text-sm text-dark-gray/80">
+                      {phoneNumber}
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href={`mailto:${emailAddress}`}
+                className="block p-4 transition duration-300 ease-in-out bg-white border border-light-gray rounded-lg shadow-sm hover:shadow-md hover:border-primary-blue/50"
+              >
+                <div className="flex items-center">
+                  <Mail className="flex-shrink-0 w-6 h-6 text-primary-blue" />
+                  <div className="ml-4">
+                    <p className="text-base font-medium text-dark-gray font-oswald">
+                      Email
+                    </p>
+                    <p className="mt-1 text-sm text-dark-gray/80">
+                      {emailAddress}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-3">
+            <div className="p-6 space-y-6 bg-light-gray rounded-lg shadow-sm border border-light-gray/50">
+              <h3 className="text-3xl font-semibold text-dark-gray font-oswald">
+                MAKE APPOINTMENT
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-lg font-semibold text-dark-gray font-oswald mb-1"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      placeholder="Your Name"
+                      className="block w-full px-4 py-3 mt-1 bg-white border border-light-gray rounded-md shadow-sm focus:ring-primary-blue focus:border-primary-blue text-base"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-lg font-semibold text-dark-gray font-oswald mb-1"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      placeholder="your.email@example.com"
+                      className="block w-full px-4 py-3 mt-1 bg-white border border-light-gray rounded-md shadow-sm focus:ring-primary-blue focus:border-primary-blue text-base"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-lg font-semibold text-dark-gray font-oswald mb-1"
+                  >
+                    Phone{" "}
+                    <span className="text-sm font-normal text-dark-gray/60">
+                      (Optional)
+                    </span>
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="(555) 123-4567"
+                    className="block w-full px-4 py-3 mt-1 bg-white border border-light-gray rounded-md shadow-sm focus:ring-primary-blue focus:border-primary-blue text-base"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-lg font-semibold text-dark-gray font-oswald mb-1"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    placeholder="Tell us about your project..."
+                    className="block w-full px-4 py-3 mt-1 bg-white border border-light-gray rounded-md shadow-sm focus:ring-primary-blue focus:border-primary-blue text-base"
+                  />
+                </div>
+
+                <div className="mt-4">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="YOUR_RECAPTCHA_SITE_KEY_HERE"
+                    onChange={handleRecaptchaChange}
+                  />
+                </div>
+
+                <div>
+                  <button type="submit" className="w-full primary-button">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
