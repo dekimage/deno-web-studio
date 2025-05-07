@@ -19,7 +19,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Dejan's Web Studio | Small Business Web Designer",
+  title: "Deno Web Studio | Small Business Web Designer",
   description:
     "100% hand-coded websites with superior results. No page builders, no WordPress. $0 down payment, $150/month. SEO optimized.",
   generator: "v0.dev",

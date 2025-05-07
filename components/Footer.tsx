@@ -26,13 +26,13 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               {/* <Image
                 src="/logo.png"
-                alt="Deno's Web Studio Logo"
+                alt="Deno Web Studio Logo"
                 width={32}
                 height={32}
                 className="h-8 w-auto"
               /> */}
               <h2 className="text-2xl font-bold text-white font-oswald">
-                Deno's Web Studio
+                Deno Web Studio
               </h2>
             </div>
             <p className="text-base text-white/70">
@@ -41,7 +41,7 @@ export default function Footer() {
             </p>
             <div className="mt-6">
               <p className="text-base text-white/70">
-                &copy; {new Date().getFullYear()} Deno's Web Studio. All rights
+                &copy; {new Date().getFullYear()} Deno Web Studio. All rights
                 reserved.
               </p>
             </div>
@@ -71,7 +71,14 @@ export default function Footer() {
                 Contact
               </h3>
               <ul className="mt-4 space-y-2">
-                <li>
+                <li className="flex items-center gap-2">
+                  <Image
+                    src="/us-flag.png"
+                    alt="US Flag"
+                    width={20}
+                    height={15}
+                    className="h-4 w-auto"
+                  />
                   <a
                     href="tel:+15551234567"
                     className="text-base text-white/70 hover:text-white"
@@ -79,12 +86,27 @@ export default function Footer() {
                     +1 (555) 123-4567
                   </a>
                 </li>
-                <li>
+                <li className="flex items-center gap-2">
+                  <Image
+                    src="/mk-flag.webp"
+                    alt="Macedonian Flag"
+                    width={20}
+                    height={15}
+                    className="h-4 w-auto"
+                  />
                   <a
-                    href="mailto:contact@denowebstudio.com"
+                    href="tel:+38977889537"
                     className="text-base text-white/70 hover:text-white"
                   >
-                    contact@denowebstudio.com
+                    +389 77 889 537
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:denowebstudio@gmail.com"
+                    className="text-base text-white/70 hover:text-white"
+                  >
+                    denowebstudio@gmail.com
                   </a>
                 </li>
               </ul>

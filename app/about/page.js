@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-dark-gray sm:text-4xl md:text-5xl font-oswald">
-              MEET THE TEAM BEHIND Deno's Web Studio
+              MEET THE TEAM BEHIND Deno Web Studio
             </h2>
           </div>
 

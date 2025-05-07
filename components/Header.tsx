@@ -31,13 +31,13 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo.png"
-              alt="Deno's Web Studio Logo"
+              alt="Deno Web Studio Logo"
               width={64}
               height={64}
               className="h-16 w-auto"
             />
             <span className="text-2xl font-bold font-oswald">
-              Deno's Web Studio
+              Deno Web Studio
             </span>
           </Link>
         </div>

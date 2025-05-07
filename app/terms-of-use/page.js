@@ -1,155 +1,239 @@
-export default function PrivacyPolicyPage() {
+export default function TermsOfServicePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 bg-light-gray">
+      <section className="py-20 bg-light-gray">
         <div className="container">
           <h1 className="text-4xl font-black tracking-tight text-center text-dark-gray sm:text-5xl md:text-6xl font-oswald">
-            PRIVACY POLICY
+            TERMS OF SERVICE
           </h1>
           <p className="mx-auto mt-6 text-center text-xl text-dark-gray/80 max-w-3xl">
-            Last Updated: April 25, 2024
+            Last Updated: April 25, 2025
           </p>
         </div>
       </section>
 
-      {/* Privacy Policy Content */}
-      <section className="py-16 bg-white">
+      {/* Terms of Service Content */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto prose prose-lg">
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              1. Introduction
-            </h2>
-            <p>
-              Deno's Web Studio ("we," "our," or "us") respects your privacy and
-              is committed to protecting it through our compliance with this
-              policy. This Privacy Policy describes the types of information we
-              may collect from you or that you may provide when you visit our
-              website and our practices for collecting, using, maintaining,
-              protecting, and disclosing that information.
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-12">
+              {/* Agreement to Terms */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  1. Agreement to Terms
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>
+                    By accessing and using Deno Web Studio's services, you agree
+                    to be bound by these Terms of Service. These terms apply to
+                    all services provided by Deno Web Studio, including but not
+                    limited to website development, hosting, maintenance, and
+                    related services.
+                  </p>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              2. Information We Collect
-            </h2>
-            <p>
-              We may collect several types of information from and about users
-              of our website, including:
-            </p>
-            <ul>
-              <li>
-                Personal information such as name, email address, telephone
-                number, and any other information you provide when filling out
-                contact forms or communicating with us.
-              </li>
-              <li>
-                Information about your internet connection, the equipment you
-                use to access our website, and usage details.
-              </li>
-              <li>
-                Non-personal information such as browser type, language
-                preference, referring site, and the date and time of each
-                visitor request.
-              </li>
-            </ul>
+              {/* Services Description */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  2. Services Description
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>Our comprehensive service package includes:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      Custom website design and development using hand-coded
+                      solutions
+                    </li>
+                    <li>
+                      Complete hosting, server, domain, and SSL management
+                    </li>
+                    <li>Ongoing technical support and maintenance</li>
+                    <li>
+                      Up to 2 hours per month of content updates and edits
+                    </li>
+                    <li>Search Engine Optimization (SEO) services</li>
+                  </ul>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              3. How We Collect Information
-            </h2>
-            <p>We collect information:</p>
-            <ul>
-              <li>Directly from you when you provide it to us.</li>
-              <li>
-                Automatically as you navigate through the site. Information
-                collected automatically may include usage details, IP addresses,
-                and information collected through cookies and other tracking
-                technologies.
-              </li>
-            </ul>
+              {/* Payment Terms */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  3. Payment Terms
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>Our payment structure is as follows:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>No upfront payment required for website development</li>
+                    <li>
+                      Monthly subscription fee of $150 (or as otherwise agreed)
+                    </li>
+                    <li>
+                      First payment is due at the end of the month in which the
+                      site is completed and approved
+                    </li>
+                    <li>
+                      All payments are processed securely via Stripe recurring
+                      billing
+                    </li>
+                    <li>
+                      Clients receive receipts and billing reminders via email
+                    </li>
+                    <li>
+                      No hidden or surprise fees - all costs are clearly
+                      outlined before billing
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              4. How We Use Your Information
-            </h2>
-            <p>
-              We use information that we collect about you or that you provide
-              to us:
-            </p>
-            <ul>
-              <li>To present our website and its contents to you.</li>
-              <li>
-                To provide you with information, products, or services that you
-                request from us.
-              </li>
-              <li>To fulfill any other purpose for which you provide it.</li>
-              <li>To carry out our obligations and enforce our rights.</li>
-              <li>
-                To notify you about changes to our website or any products or
-                services we offer.
-              </li>
-              <li>
-                In any other way we may describe when you provide the
-                information.
-              </li>
-              <li>For any other purpose with your consent.</li>
-            </ul>
+              {/* Minimum Commitment */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  4. Minimum Commitment
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>Service commitment terms:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>12-month minimum service commitment required</li>
+                    <li>After 12 months, service continues month-to-month</li>
+                    <li>
+                      Early termination before 12 months requires payment of
+                      remaining balance
+                    </li>
+                    <li>
+                      Remaining balance can be paid immediately or continued
+                      monthly until fulfilled
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              5. Disclosure of Your Information
-            </h2>
-            <p>
-              We may disclose personal information that we collect or you
-              provide:
-            </p>
-            <ul>
-              <li>To our subsidiaries and affiliates.</li>
-              <li>
-                To contractors, service providers, and other third parties we
-                use to support our business and who are bound by contractual
-                obligations to keep personal information confidential and use it
-                only for the purposes for which we disclose it to them.
-              </li>
-              <li>To comply with any court order, law, or legal process.</li>
-              <li>
-                To enforce or apply our terms of use and other agreements.
-              </li>
-              <li>
-                If we believe disclosure is necessary or appropriate to protect
-                the rights, property, or safety of Deno's Web Studio, our
-                customers, or others.
-              </li>
-            </ul>
+              {/* Ownership & Access */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  5. Ownership & Access
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>Ownership rights and access terms:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      During the 12-month term, all design, code, and hosting
+                      remain property of Deno Web Studio
+                    </li>
+                    <li>
+                      Domain name ownership depends on original purchaser
+                      (client or Deno Web Studio)
+                    </li>
+                    <li>
+                      All code, design, and assets remain property of Deno Web
+                      Studio unless explicitly transferred
+                    </li>
+                    <li>
+                      Transfer of assets may be negotiated separately after
+                      contract fulfillment
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              6. Data Security
-            </h2>
-            <p>
-              We have implemented measures designed to secure your personal
-              information from accidental loss and from unauthorized access,
-              use, alteration, and disclosure. However, the transmission of
-              information via the internet is not completely secure. Although we
-              do our best to protect your personal information, we cannot
-              guarantee the security of your personal information transmitted to
-              our website.
-            </p>
+              {/* Additional Services */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  6. Additional Services
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>Terms for additional services and features:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      Additional features (e.g., booking systems, digital menus)
+                      require separate agreement
+                    </li>
+                    <li>
+                      Extra services may be charged as one-time payments or
+                      additional monthly fees
+                    </li>
+                    <li>
+                      All additional services follow the same payment terms and
+                      methods
+                    </li>
+                    <li>
+                      Changes to existing services require written agreement
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              7. Changes to Our Privacy Policy
-            </h2>
-            <p>
-              It is our policy to post any changes we make to our privacy policy
-              on this page. If we make material changes to how we treat our
-              users&apos; personal information, we will notify you through a
-              notice on the website home page. The date the privacy policy was
-              last revised is identified at the top of the page.
-            </p>
+              {/* Service Delivery */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  7. Service Delivery
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>We commit to:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Delivering high-quality, hand-coded websites</li>
+                    <li>Providing SEO-optimized content and structure</li>
+                    <li>Ensuring responsive design across all devices</li>
+                    <li>Maintaining regular backups of your website</li>
+                    <li>Providing ongoing technical support</li>
+                    <li>Processing up to 2 hours of monthly content updates</li>
+                  </ul>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-dark-gray font-oswald">
-              8. Contact Information
-            </h2>
-            <p>
-              To ask questions or comment about this privacy policy and our
-              privacy practices, contact us at: contact@denowebstudio.com
-            </p>
+              {/* Limitation of Liability */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  8. Limitation of Liability
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>
+                    Deno Web Studio shall not be liable for any indirect,
+                    incidental, special, consequential, or punitive damages
+                    resulting from your use of our services. Our liability is
+                    limited to the amount paid for services in the month
+                    preceding any claim.
+                  </p>
+                </div>
+              </div>
+
+              {/* Changes to Terms */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  9. Changes to Terms
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>
+                    We reserve the right to modify these terms at any time.
+                    Changes will be effective upon posting to our website.
+                    Continued use of our services after changes constitutes
+                    acceptance of the new terms.
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-dark-gray font-oswald">
+                  10. Contact Information
+                </h2>
+                <div className="prose prose-lg text-dark-gray/80">
+                  <p>
+                    For questions about these Terms of Service, please contact
+                    us at:{" "}
+                    <a
+                      href="mailto:denowebstudio@gmail.com"
+                      className="text-blue-600 hover:text-blue-800"
+                    >
+                      denowebstudio@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
