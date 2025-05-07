@@ -2,7 +2,8 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Phone, Mail, Copy, Check } from "lucide-react";
+import { Phone, Mail, Copy, Check, ArrowRight } from "lucide-react";
+import ProcessSteps from "./ProcessSteps";
 
 const formatDate = (date: Date): string => {
   const day = date.getDate();
@@ -161,6 +162,8 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
+
+        <ProcessSteps />
 
         <div className="grid grid-cols-1 gap-12 mt-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
