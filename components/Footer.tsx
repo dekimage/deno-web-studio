@@ -80,10 +80,10 @@ export default function Footer() {
                     className="h-4 w-auto"
                   />
                   <a
-                    href="tel:+15551234567"
+                    href="tel:+38977889537"
                     className="text-base text-white/70 hover:text-white"
                   >
-                    +1 (555) 123-4567
+                    +1 (435) 901-9804
                   </a>
                 </li>
                 <li className="flex items-center gap-2">

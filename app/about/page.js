@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
             <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-80 lg:h-96">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/v1.jpg"
                 alt="Deno - Web Designer"
                 fill
                 className="object-cover"
@@ -141,12 +141,12 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
             {/* Team Member 1 */}
             <div className="text-center">
               <div className="relative mx-auto overflow-hidden rounded-full w-36 h-36">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/dejan.png"
                   alt="Dejan Gavrilovic"
                   fill
                   className="object-cover"
@@ -156,54 +156,41 @@ export default function AboutPage() {
                 Dejan Gavrilovic
               </h3>
               <p className="text-primary-blue">Owner, Lead Developer</p>
+              <p className="text-dark-gray/80">Skopje, MK</p>
             </div>
 
             {/* Team Member 2 */}
             <div className="text-center">
               <div className="relative mx-auto overflow-hidden rounded-full w-36 h-36">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Team Member"
+                  src="/marija.png"
+                  alt="Marija Zoric"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="mt-4 text-xl font-bold text-dark-gray font-oswald">
-                Sarah Johnson
+                Marija Zoric
               </h3>
-              <p className="text-primary-blue">UI/UX Designer</p>
+              <p className="text-primary-blue">Marketing & Design</p>
+              <p className="text-dark-gray/80">Skopje, MK</p>
             </div>
 
             {/* Team Member 3 */}
             <div className="text-center">
               <div className="relative mx-auto overflow-hidden rounded-full w-36 h-36">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Team Member"
+                  src="/tony.png"
+                  alt="Tony Manolov"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="mt-4 text-xl font-bold text-dark-gray font-oswald">
-                Michael Chen
+                Tony Manolov
               </h3>
-              <p className="text-primary-blue">Frontend Developer</p>
-            </div>
-
-            {/* Team Member 4 */}
-            <div className="text-center">
-              <div className="relative mx-auto overflow-hidden rounded-full w-36 h-36">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Team Member"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="mt-4 text-xl font-bold text-dark-gray font-oswald">
-                Emma Rodriguez
-              </h3>
-              <p className="text-primary-blue">Content Specialist</p>
+              <p className="text-primary-blue">Business and Sales</p>
+              <p className="text-dark-gray/80">Park City, Utah, USA</p>
             </div>
           </div>
         </div>

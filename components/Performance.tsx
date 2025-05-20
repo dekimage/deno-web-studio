@@ -32,7 +32,9 @@ export default function Performance() {
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <h2 className="section-title">
-              WE BUILD BETTER WEBSITES THAT PERFORM
+              {/* WE BUILD BETTER WEBSITES THAT PERFORM
+               */}
+              GET MORE CLIENTS WITH BLAZING FAST WEBSITES
             </h2>
             <p className="mt-4 text-lg text-dark-gray/80">
               100% satisfaction guarantee. Our websites are built for speed,

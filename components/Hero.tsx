@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
           <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-80 lg:h-96">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/v2.jpg"
               alt="Web design services"
               fill
               className="object-cover"

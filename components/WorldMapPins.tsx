@@ -9,7 +9,6 @@ const pinLocations = [
   { top: "40%", left: "28%" }, // Approx North America East
   { top: "30%", left: "50%" }, // Approx Europe West
   { top: "33%", left: "55%" }, // Approx Europe Central
-  { top: "65%", left: "80%" }, // Approx Australia
   { top: "60%", left: "30%" }, // Approx South America
 ];
 

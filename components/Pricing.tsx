@@ -9,15 +9,15 @@ const packages = [
     description:
       "Best choice for small businesses looking for a professional web presence and more clients",
     features: [
-      "5 pages included",
+      "Unlimited pages included",
       "Hosting & domain included",
-      "Unlimited edits",
       "Lifetime updates",
-      "24/7 support",
-      "+$100/page after 5 pages",
-      "+$250 to add blog",
+      "Direct personal support (with me)",
       "SEO Optimized",
       "100% Security & SSL certificate",
+      "+$250 flat to add blog",
+      "+$300/mo to add AI chatbot 24/7 seller",
+      "+$150/mo to add scheduling system",
     ],
     cta: "Get Started",
     popular: true,
@@ -62,7 +62,7 @@ const packages = [
 
 export default function Pricing() {
   return (
-    <section className="py-16 bg-white" id="pricing">
+    <section className="py-16 bg-white scroll-mt-24" id="pricing">
       <div className="container">
         <div className="text-center">
           <h2 className="section-title">SIMPLE PRICING</h2>

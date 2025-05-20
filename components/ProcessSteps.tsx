@@ -11,6 +11,7 @@ import {
   Gauge,
   CreditCard,
   Headphones,
+  CheckCircle2,
 } from "lucide-react";
 
 interface ProcessStep {
@@ -150,9 +151,12 @@ export default function ProcessSteps() {
                 <div className="flex gap-6">
                   {/* Icon circle with dot */}
                   <div className="relative flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary-blue text-white">
+                    <div
+                      className={`flex items-center justify-center w-12 h-12 rounded-full bg-primary-blue text-white`}
+                    >
                       {step.icon}
                     </div>
+                    <div className="absolute left-1/2 -translate-x-1/2 top-12 w-2 h-2 rounded-full bg-primary-blue" />
                   </div>
 
                   {/* Content */}
@@ -162,10 +166,44 @@ export default function ProcessSteps() {
                         {step.timeEstimate}
                       </span>
                     </div>
-                    <h4 className="text-xl font-semibold text-dark-gray font-oswald mb-2">
+                    <h4
+                      className={`text-xl font-semibold text-dark-gray font-oswald mb-2 ${
+                        step.title === "Website Launch" ? "text-2xl" : ""
+                      }`}
+                    >
                       {step.title}
                     </h4>
                     <p className="text-dark-gray/80">{step.description}</p>
+
+                    {/* Special Launch Section */}
+                    {step.title === "Website Launch" && (
+                      <div className="mt-6 p-4 bg-lime-50 rounded-lg border border-lime-200">
+                        <div className="flex items-center gap-3">
+                          <CheckCircle2 className="w-6 h-6 text-lime-500" />
+                          <h5 className="text-xl font-bold text-lime-700">
+                            YOUR WEBSITE IS NOW LIVE! 🎉
+                          </h5>
+                        </div>
+                        <div className="mt-2 flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-lime-500 animate-pulse" />
+                          <span className="text-sm text-lime-700">
+                            Status: Active
+                          </span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Special Payment Section */}
+                    {step.title === "Easy Payment Setup" && (
+                      <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                        <div className="flex items-center gap-2">
+                          <CreditCard className="w-4 h-4 text-blue-500" />
+                          <p className="text-sm text-blue-700 font-medium">
+                            Your first payment is after everything we do!
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

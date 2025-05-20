@@ -2,15 +2,16 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "24/7 support",
-  "Maintenance",
-  "Unlimited edits",
-  "100% custom-coded",
-  "Secure websites",
-  "SEO-optimized",
   "Personal support (Me)",
+  "Hosting & Domain Included",
+  "SEO-optimized",
+  "Monthly edits",
+
+  "100% custom-coded",
+
   "No bots or autoresponders",
-  "Money-back guarantee",
+  "SSL Certificate Included",
+  "Lifetime updates",
 ];
 
 export default function AboutDesigner() {
@@ -28,9 +29,9 @@ export default function AboutDesigner() {
       />
       <div className="container">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-80 lg:h-96">
+          <div className="relative h-80 overflow-hidden rounded-lg shadow-xl sm:h-96 lg:h-[600px]">
             <Image
-              src="/placeholder.svg?height=600&width=600"
+              src="/v1.jpg"
               alt="Dejan - Web Designer"
               fill
               className="object-cover"
@@ -57,9 +58,8 @@ export default function AboutDesigner() {
             </div>
 
             <p className="mt-6 text-lg font-medium text-dark-gray">
-              <span className="text-primary-blue">Guarantee:</span> If I
-              can&apos;t make it right for you, cancel anytime with a full
-              refund.
+              <span className="text-primary-blue">Guarantee:</span> You won't
+              pay a penny until you're 100% happy with the website.
             </p>
           </div>
         </div>

@@ -2,7 +2,15 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Phone, Mail, Copy, Check, ArrowRight } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Copy,
+  Check,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 import ProcessSteps from "./ProcessSteps";
 
 const formatDate = (date: Date): string => {
@@ -93,9 +101,11 @@ export default function ContactForm() {
   const targetDate = new Date();
   targetDate.setDate(today.getDate() + 14);
 
-  const phoneNumber = "+15551234567";
+  const phoneNumber = "+38977889537";
   const cleanPhoneNumber = phoneNumber.replace(/\\D/g, "");
   const emailAddress = "denowebstudio@gmail.com";
+
+  const [showSteps, setShowSteps] = useState(false);
 
   return (
     <section className="py-16 bg-white" id="contact">
@@ -163,7 +173,26 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <ProcessSteps />
+        <div className="text-center my-8">
+          <button
+            onClick={() => setShowSteps(!showSteps)}
+            className="inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-primary-blue rounded-lg hover:bg-primary-blue/90 transition-colors"
+          >
+            {showSteps ? (
+              <>
+                Hide Steps
+                <ChevronUp className="w-5 h-5" />
+              </>
+            ) : (
+              <>
+                See the Entire Process (Timeline)
+                <ChevronDown className="w-5 h-5" />
+              </>
+            )}
+          </button>
+        </div>
+
+        {showSteps && <ProcessSteps />}
 
         <div className="grid grid-cols-1 gap-12 mt-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
@@ -308,7 +337,7 @@ export default function ContactForm() {
                     id="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(555) 123-4567"
+                    placeholder="(435) 901-9804"
                     className="block w-full px-4 py-3 mt-1 bg-white border border-light-gray rounded-md shadow-sm focus:ring-primary-blue focus:border-primary-blue text-base"
                   />
                 </div>

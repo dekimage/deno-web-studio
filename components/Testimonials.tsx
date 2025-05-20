@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import Link from "next/link";
 
 const testimonials = [
@@ -43,6 +43,11 @@ export default function Testimonials() {
               <p className="mt-4 text-dark-gray/80 italic">
                 "{testimonial.quote}"
               </p>
+              <div className="flex items-center my-4 text-orange-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-current" />
+                ))}
+              </div>
               <div className="flex items-center mt-6">
                 <div className="flex-shrink-0">
                   <div className="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center text-white font-bold">

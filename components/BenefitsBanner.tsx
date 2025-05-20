@@ -26,10 +26,9 @@ const benefits = [
   "Beat Competitors Online",
   "Look Trustworthy and Reliable",
   "100% Custom Design (No Templates)",
-  "Free Hosting Advice",
-  "Website Security Monitoring",
+  "Hosting & Domain Included",
+  "SSL Certificate Included",
   "Conversion Focused Pages",
-  "Strategy Suggestions Monthly",
 ];
 
 // Duplicate the benefits array for a seamless loop
