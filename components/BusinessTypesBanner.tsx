@@ -34,7 +34,7 @@ const businessTypes = [
   // "Landscaping",
 ];
 
-// Duplicate the business types array for a seamless loop
+// Duplicate the business types array for a seamless loops
 const doubledBusinessTypes = [...businessTypes, ...businessTypes];
 
 export default function BusinessTypesBanner() {
