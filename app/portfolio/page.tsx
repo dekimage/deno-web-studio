@@ -145,7 +145,7 @@ export default function PortfolioPage() {
 
           {/* Tech Stack for Apps */}
           {isAppView && (
-            <div className="flex items-start col-span-3">
+            <div className="flex items-start col-span-1 sm:col-span-3">
               <Code className="w-4 h-4 mr-2 mt-0.5 text-primary-blue flex-shrink-0" />
               <div>
                 <span className="font-semibold">Tech Stack:</span>
