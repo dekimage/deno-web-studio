@@ -41,12 +41,13 @@ export default function Portfolio() {
                   {project.description}
                 </p>
                 <Link
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/portfolio`}
+                  // href={project.liveUrl}
+                  // target="_blank"
+                  // rel="noopener noreferrer"
                   className="inline-block w-full mt-4 text-center primary-button font-oswald"
                 >
-                  Visit Website
+                  View Project
                 </Link>
               </div>
             </div>

@@ -17,13 +17,21 @@ const businessTypes = [
   "Jewelry Store",
   "Law Firm",
   "Restaurant",
-  "Coffee Shop",
-  "Boutique",
-  "Auto Repair",
-  "Plumber",
-  "Electrician",
-  "HVAC Service",
-  "Landscaping",
+  "Yoga Platform",
+  "Game Hub",
+  "Study Platform",
+  "Deck Builder Game",
+  "Board Game Studio",
+  "Digital Game Studio",
+  "Routines Tracker",
+
+  // "Coffee Shop",
+  // "Boutique",
+  // "Auto Repair",
+  // "Plumber",
+  // "Electrician",
+  // "HVAC Service",
+  // "Landscaping",
 ];
 
 // Duplicate the business types array for a seamless loop
