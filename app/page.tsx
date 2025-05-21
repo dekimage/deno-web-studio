@@ -21,6 +21,7 @@ export default function Home() {
       <Portfolio />
       <Performance />
       <Pricing />
+      <Features min={6} max={12} />
       <Testimonials />
       <FinalCTA />
       <ContactForm />

@@ -16,10 +16,10 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-80 lg:h-96">
+            <div className="relative h-80 overflow-hidden rounded-lg shadow-xl sm:h-96 lg:h-[600px]">
               <Image
                 src="/v1.jpg"
-                alt="Deno - Web Designer"
+                alt="Dejan - Web Designer"
                 fill
                 className="object-cover"
               />
@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-dark-gray sm:text-4xl md:text-5xl font-oswald">
-              MEET THE TEAM BEHIND Deno Web Studio
+              MEET THE TEAM
             </h2>
           </div>
 
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="relative mx-auto overflow-hidden rounded-full w-36 h-36">
                 <Image
-                  src="/tony.png"
+                  src="/toni.webp"
                   alt="Tony Manolov"
                   fill
                   className="object-cover"

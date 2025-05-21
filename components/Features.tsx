@@ -90,7 +90,7 @@ const features = [
   },
 ];
 
-export default function Features() {
+export default function Features({ min = 0, max = 6 }) {
   return (
     <section className="py-16 bg-white relative overflow-visible" id="features">
       <Image
@@ -102,7 +102,7 @@ export default function Features() {
       />
       <div className="container">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
+          {features.slice(min, max).map((feature) => (
             <div key={feature.name} className="feature-card">
               <div className="flex items-center justify-center w-12 h-12 text-white rounded-md bg-primary-blue shadow-md">
                 <feature.icon className="w-6 h-6" />

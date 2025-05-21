@@ -9,7 +9,9 @@ export default function Portfolio() {
     <section className="py-16 bg-white" id="portfolio">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title">SOME OF OUR WORK</h2>
+          {/* <h2 className="section-title">SOME OF OUR WORK</h2> */}
+          <h2 className="section-title">PORTFOLIO</h2>
+
           <p className="section-subtitle mx-auto">
             We specialize in websites for cafes, restaurants, barbershops, hair
             salons, nail studios, tattoo shops, fitness coaches, and other local
