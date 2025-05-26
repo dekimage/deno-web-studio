@@ -27,6 +27,19 @@ export interface App {
 
 export const projects: Project[] = [
   {
+    name: "Elite Gym",
+    description: "Gym website with online booking system.",
+    images: ["/gym-1.png", "/gym-2.png", "/gym-3.png", "/gym-4.png"],
+    liveUrl: "https://elite-gym-mauve.vercel.app/", // Replace with actual URL
+    tags: ["Gym", "Business Website", "Next.js"],
+    details:
+      "Developed a responsive website featuring a professional and clean design, with a focus on user experience and functionality.",
+    typography: ["Anton"],
+    colors: ["#0E0E0E", "#FFD500", "#FFF9DF"],
+    location: "Winnipeg, Canada",
+    status: "Live",
+  },
+  {
     name: "Iron Edge Barbers",
     description: "Barbershop website with online booking system.",
     images: ["/barber1.png", "/barber2.png", "/barber3.png", "/barber4.png"],
